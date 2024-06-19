@@ -1,0 +1,16 @@
+server:
+  port: 8082
+feign:
+  okhttp:
+    enabled: true
+  sentinel:
+    enabled: true
+db:
+  host: 192.168.213.208
+  database: work6-transcation
+  pw: 123
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

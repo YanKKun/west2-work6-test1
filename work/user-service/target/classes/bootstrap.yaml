@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: user-service
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 192.168.213.208:8718
+      http-method-specify: true
+    nacos:
+      server-addr: 192.168.213.208:8848
+      config:
+        file-extension: yaml
+        shared-configs:
+          - data-id: work6-jdbc.yaml
+          - data-id: work6-redis.yaml
+

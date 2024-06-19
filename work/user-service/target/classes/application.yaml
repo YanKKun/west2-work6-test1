@@ -1,0 +1,29 @@
+server:
+  port: 8081
+feign:
+  okhttp:
+    enabled: true
+  sentinel:
+    enabled: true
+db:
+  host: 192.168.213.208
+  database: work6-user
+  pw: 123
+spring:
+  main:
+    allow-bean-definition-overriding: true
+jwt:
+  location: classpath:work.jks
+  alias: work6
+  password: hmall123
+  tokenTTL: 30m
+auth:
+  excludePaths:
+    - /user/login
+    - /user/register
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
